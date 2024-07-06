@@ -12,7 +12,7 @@
 - [Plataforma para execução do projeto](#plataforma-para-execução-do-projeto)
 - [Linguagen e framework](#Linguagen-e-framework)
 - [Instalação](#Instalação)
-- [Execução de Testes](Execução-de-testes)
+- [Execução e Testes](Execução-e-testes)
 - [Banco de Dados](#Banco-de-dados)
 
 ## Para iniciar o serviço 
