@@ -67,13 +67,12 @@ Rodas as Migrations
 
 ## Execução e testes
 
-Criar um novo usuário para autenticação pela linha de comando<br>
+Criar um novo usuário para autenticação pela linha de comando
 ```php
 docker exec -it cadastroclientes_app_1 php yii create-user/index "teste" "teste123" "Usuário de teste"
 ```
 
-<br>
-Criar um novo usuário pelo insomnia ou postman<br>
+Criar um novo usuário pelo insomnia ou postman<br><br>
 Metodo: POST
 
 ```php
@@ -102,8 +101,7 @@ JSON
 }
 ```
 
-<br>
-Novo Cliente
+Inserir um novo Cliente<br>
 Método: POST
 
 ```php
@@ -122,25 +120,21 @@ http://localhost:8000/v1/clientes
 }
 ```
 
-<br>
-Listar todos os clientes
+Listar todos os clientes<br>
 Método: GET
 
 ```php
-
 GET http://localhost:8000/v1/clientes
 ```
 
-<br>
-Listar um cliente específico
+Listar um cliente específico<br>
 Método: GET
 
 ```php
 http://localhost:8000/v1/clientes/1
 ```
 
-<br>
-Para registrar um produto
+Criar um produto<br>
 Método: POST
 
 ```php
@@ -154,16 +148,14 @@ http://localhost:8000/v1/produtos
 }
 ```
 
-<br>
-Listar produtos (Headers Content-Type e application/json)
+Listar todos os produtos<br>
 Método: GET
 
 ```php
 http://localhost:8000/v1/produtos
 ```
 
-<br>
-Listar produto pelo cliente
+Listar produtos de um determinado cliente<br>
 Método: GET
 
 ```php
