@@ -171,5 +171,5 @@ http://localhost:8000/v1/produtos/cliente/2
 ```
 
 ## Banco de dados
-</br>MySql 8.0
+MySql 8.0
 ```
