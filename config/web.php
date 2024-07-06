@@ -7,6 +7,7 @@ $config = [
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
+    'language' => 'pt-BR', // Define o idioma padrão como português
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
@@ -50,7 +51,7 @@ $config = [
                 'logout' => 'site/logout',
                 'contact' => 'site/contact',
                 'about' => 'site/about',
-                // APIs                
+                // APIs
                 'POST v1/login' => 'auth/login',
                 'POST v1/register' => 'auth/register',
                 'GET v1/clientes' => 'cliente/index',
@@ -63,6 +64,20 @@ $config = [
                 'GET v1/produtos/<id:\d+>' => 'produto/view',
                 'PUT v1/produtos/<id:\d+>' => 'produto/update',
                 'DELETE v1/produtos/<id:\d+>' => 'produto/delete',
+                'GET v1/produtos/cliente/<cliente_id:\d+>' => 'produto/list-by-cliente',
+                'POST v1/test' => 'auth/test',
+            ],
+        ],
+        'i18n' => [
+            'translations' => [
+                '*' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@app/messages',
+                    'sourceLanguage' => 'en-US',
+                    'fileMap' => [
+                        'yii' => 'yii.php',
+                    ],
+                ],
             ],
         ],
     ],
@@ -72,10 +87,6 @@ $config = [
         ],
     ],
     'params' => $params,
-    'as auth' => [
-        'class' => \yii\filters\auth\HttpBearerAuth::class,
-        'except' => ['site/login', 'site/error'],
-    ],
 ];
 
 if (YII_ENV_DEV) {

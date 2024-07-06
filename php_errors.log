@@ -1,0 +1,12 @@
+[05-Jul-2024 20:39:47 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'ext\php_excel.dll' - Não foi possível encontrar o módulo especificado.
+ in Unknown on line 0
+[05-Jul-2024 20:39:48 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'ext\php_imagick.dll' - Não foi possível encontrar o módulo especificado.
+ in Unknown on line 0
+[05-Jul-2024 20:39:51 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'ext\php_svn.dll' - Não foi possível encontrar o módulo especificado.
+ in Unknown on line 0
+[05-Jul-2024 20:39:52 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'ext\php_excel.dll' - Não foi possível encontrar o módulo especificado.
+ in Unknown on line 0
+[05-Jul-2024 20:39:52 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'ext\php_imagick.dll' - Não foi possível encontrar o módulo especificado.
+ in Unknown on line 0
+[05-Jul-2024 20:39:52 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'ext\php_svn.dll' - Não foi possível encontrar o módulo especificado.
+ in Unknown on line 0

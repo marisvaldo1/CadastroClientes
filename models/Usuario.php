@@ -54,6 +54,31 @@ class Usuario extends ActiveRecord implements IdentityInterface
 
     public function validatePassword($senha)
     {
-        return Yii::$app->security->validatePassword($senha, $this->senha);
+        Yii::info('Validando senha', __METHOD__);
+        $isValid = Yii::$app->security->validatePassword($senha, $this->senha);
+        Yii::info('Resultado da validação da senha: ' . ($isValid ? 'válida' : 'inválida'), __METHOD__);
+        return $isValid;
+    }
+
+    public function generateAuthKey()
+    {
+        $this->chave_autenticacao = Yii::$app->security->generateRandomString();
+    }
+
+    public function generateAccessToken()
+    {
+        $this->token_acesso = Yii::$app->security->generateRandomString();
+    }
+
+    public function beforeSave($insert)
+    {
+        if (parent::beforeSave($insert)) {
+            if ($this->isNewRecord) {
+                $this->generateAuthKey();
+                $this->generateAccessToken();
+            }
+            return true;
+        }
+        return false;
     }
 }
