@@ -12,7 +12,7 @@
 - [Plataforma para execução do projeto](#plataforma-para-execução-do-projeto)
 - [Linguagens utilizadas no desenvolvimento](#linguagem)
 - [Instalação](#Instalação)
-- [Banco de dados](#banco-de-dados)
+- [Execuçáo de Testes](Execução-e-testes)
 - [Observações](#observações)
 
 ## Para iniciar o serviço 
@@ -33,48 +33,141 @@ YII 2.0.15
 
 ## Instalação
 
-```Clonar o repositório
-https://github.com/marisvaldo1/CadastroClientes.git
+Clone o projeto
 
-Acessar o diretório
-cd CADASTROCLIENTES
+```bash
+  git clone https://github.com/marisvaldo1/CadastroClientes.git
+  cd CADASTROCLIENTES
+```
 
-Instalar Dependências do Composer
-    pelo terminal executar 
-        - composer install
+Instale as dependências
 
-Subir os Contêineres do Docker:
-Com o Docker Desktop já em execução, utilize o comando abaixo para subir os contêineres definidos no docker-compose.yml.
-docker-compose up -d --build
+```bash
+  composer install
+```
 
-As seguintes pastas podem precisar de permissão para execução.
-No terminal execute
-    docker exec -it cadastroclientes_app_1 php chmod -R 777 runtime
-    docker exec -it cadastroclientes_app_1 php chmod -R 777 web/assets
-        
-rodar as migrations para a criação das tabelas 
-    docker exec -it cadastroclientes_app_1 php yii migrate
+Subir os conainers do docker
 
-Criar um novo usuário para autenticação pela linha de comando
-    docker exec -it cadastroclientes_app_1 php yii create-user/index "teste" "teste123" "Usuário de teste"
+```bash
+  docker-compose up -d --build
+```
 
-Criar um novo usuário pelo insomnia ou postman
+Permissão nas pastas
+
+```bash
+  docker exec -it cadastroclientes_app_1 php chmod -R 777 runtime
+  docker exec -it cadastroclientes_app_1 php chmod -R 777 web/assets
+```
+
+Rodas as Migrations
+
+```bash
+  docker exec -it cadastroclientes_app_1 php yii migrate
+```
+
+## Execução e testes
+
+Criar um novo usuário para autenticação pela linha de comando<br>
+```php
+docker exec -it cadastroclientes_app_1 php yii create-user/index "teste" "teste123" "Usuário de teste"
+```
+
+<br>
+Criar um novo usuário pelo insomnia ou postman<br>
 Metodo: POST
-    http://localhost:8000/v1/register
-    {
-      "login": "teste",
-      "senha": "teste123",
-      "nome": "Usuário de teste"
-    }
 
-Para obter o token do usuário criado (Usar no Heathers Content-Type - application/json)
-http://localhost:8000/v1/login
+```php
+http://localhost:8000/v1/register
+
+JSON
 {
   "login": "teste",
   "senha": "teste123",
+  "nome": "Usuário de teste"
 }
+```
 
+<br>
+obter o token e logar (Colocar no insomnia Heathers Content-Type e application/json)<br>
+Metodo: POST
 
+```php
+http://localhost:8000/v1/login
+
+JSON
+{
+  "login": "teste",
+  "senha": "teste123",
+  "nome": "Usuário de teste"
+}
+```
+
+<br>
+Novo Cliente
+Método: POST
+
+```php
+http://localhost:8000/v1/clientes
+{
+    "nome": "Teste Cliente",
+    "cpf": "40273598104",
+    "cep": "12345678",
+    "logradouro": "Rua Teste",
+    "numero": 123,
+    "cidade": "Cidade Teste",
+    "estado": "Estado Teste",
+    "complemento": "Complemento Teste",
+    "sexo": "M",
+    "foto": "url_da_foto"
+}
+```
+
+<br>
+Listar todos os clientes
+Método: GET
+
+```php
+
+GET http://localhost:8000/v1/clientes
+```
+
+<br>
+Listar um cliente específico
+Método: GET
+
+```php
+http://localhost:8000/v1/clientes/1
+```
+
+<br>
+Para registrar um produto
+Método: POST
+
+```php
+http://localhost:8000/v1/produtos
+
+{
+    "nome": "Nome do Produto",
+    "preco": 99.99,
+    "cliente_id": 1,
+    "foto": "url_da_foto_do_produto"
+}
+```
+
+<br>
+Listar produtos (Headers Content-Type e application/json)
+Método: GET
+
+```php
+http://localhost:8000/v1/produtos
+```
+
+<br>
+Listar produto pelo cliente
+Método: GET
+
+```php
+http://localhost:8000/v1/produtos/cliente/2
 ```
 
 ## Banco de dados
