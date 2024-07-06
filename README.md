@@ -68,9 +68,11 @@ Rodar as Migrations
 ## Execução e testes
 
 Criar um novo usuário para autenticação pela linha de comando
+
 ```php
 docker exec -it cadastroclientes_app_1 php yii create-user/index "teste" "teste123" "Usuário de teste"
 ```
+<br>
 
 Criar um novo usuário pelo insomnia ou postman<br><br>
 Metodo: POST
@@ -85,8 +87,8 @@ JSON
   "nome": "Usuário de teste"
 }
 ```
-
 <br>
+
 Obter o token e logar (Colocar no insomnia Heathers Content-Type e application/json)<br>
 Metodo: POST
 
@@ -100,6 +102,7 @@ JSON
   "nome": "Usuário de teste"
 }
 ```
+<br>
 
 Criar um novo Cliente<br>
 Método: POST
@@ -119,6 +122,7 @@ http://localhost:8000/v1/clientes
     "foto": "url_da_foto"
 }
 ```
+<br>
 
 Listar todos os clientes<br>
 Método: GET
@@ -126,6 +130,7 @@ Método: GET
 ```php
 GET http://localhost:8000/v1/clientes
 ```
+<br>
 
 Listar um cliente específico<br>
 Método: GET
@@ -133,6 +138,7 @@ Método: GET
 ```php
 http://localhost:8000/v1/clientes/1
 ```
+<br>
 
 Criar um produto<br>
 Método: POST
@@ -147,6 +153,7 @@ http://localhost:8000/v1/produtos
     "foto": "url_da_foto_do_produto"
 }
 ```
+<br>
 
 Listar todos os produtos<br>
 Método: GET
@@ -154,6 +161,7 @@ Método: GET
 ```php
 http://localhost:8000/v1/produtos
 ```
+<br>
 
 Listar produtos de um determinado cliente<br>
 Método: GET
