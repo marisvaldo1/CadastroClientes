@@ -10,10 +10,10 @@
 
 - [Para iniciar](#para-iniciar-o-serviço)
 - [Plataforma para execução do projeto](#plataforma-para-execução-do-projeto)
-- [Linguagens utilizadas no desenvolvimento](#linguagem)
+- [Linguagen e framework](#Linguagen-e-framework)
 - [Instalação](#Instalação)
-- [Execuçáo de Testes](Execução-e-testes)
-- [Observações](#observações)
+- [Execução de Testes](Execução-de-testes)
+- [Banco de Dados](#Banco-de-dados)
 
 ## Para iniciar o serviço 
 Essas instruções farão com que você tenha uma cópia do projeto em execução na sua máquina local para fins de desenvolvimento e teste. Veja as notas de implantação sobre como instalar e rodar o sistema.
@@ -24,7 +24,7 @@ Essas instruções farão com que você tenha uma cópia do projeto em execuçã
 Ferramenta cliente de API REST (Postman ou Insomnia)
 ```
 
-## Linguagem
+## Linguagen e framework
 
 ```php
 PHP 7.1.33
@@ -52,14 +52,14 @@ Subir os conainers do docker
   docker-compose up -d --build
 ```
 
-Permissão nas pastas
+Dar permissão nas pastas
 
 ```bash
   docker exec -it cadastroclientes_app_1 php chmod -R 777 runtime
   docker exec -it cadastroclientes_app_1 php chmod -R 777 web/assets
 ```
 
-Rodas as Migrations
+Rodar as Migrations
 
 ```bash
   docker exec -it cadastroclientes_app_1 php yii migrate
@@ -87,7 +87,7 @@ JSON
 ```
 
 <br>
-obter o token e logar (Colocar no insomnia Heathers Content-Type e application/json)<br>
+Obter o token e logar (Colocar no insomnia Heathers Content-Type e application/json)<br>
 Metodo: POST
 
 ```php
@@ -101,7 +101,7 @@ JSON
 }
 ```
 
-Inserir um novo Cliente<br>
+Criar um novo Cliente<br>
 Método: POST
 
 ```php
@@ -163,15 +163,5 @@ http://localhost:8000/v1/produtos/cliente/2
 ```
 
 ## Banco de dados
-</br>Tipo de servidor: PostgreSQL
-As configurações do banco de dados estão no arquivo .env abaixo
-<br>
-
-```.env
-DB_CONNECTION=pgsql
-DB_HOST=127.0.0.1
-DB_PORT=5432
-DB_DATABASE=FirstDecision
-DB_USERNAME=usuario
-DB_PASSWORD=senha
+</br>MySql 8.0
 ```
