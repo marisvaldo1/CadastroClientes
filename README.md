@@ -106,6 +106,7 @@ JSON
 Criar um novo Cliente<br>
 Método: POST<br>
 Usar o token obtido pelo login<br>
+
 ```php
 http://localhost:8000/v1/clientes
 {
@@ -133,7 +134,8 @@ GET http://localhost:8000/v1/clientes
 <br>
 
 Listar um cliente específico<br>
-Método: GET
+Método: GET<br>
+Usar o token obtido pelo login<br>
 
 ```php
 http://localhost:8000/v1/clientes/1
