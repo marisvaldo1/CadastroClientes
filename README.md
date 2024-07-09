@@ -99,7 +99,6 @@ JSON
 {
   "login": "teste",
   "senha": "teste123",
-  "nome": "Usuário de teste"
 }
 ```
 <br>
