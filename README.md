@@ -104,7 +104,7 @@ JSON
 <br>
 
 Criar um novo Cliente<br>
-Método: POST
+Método: POST<br>
 Usar o token obtido pelo login<br>
 ```php
 http://localhost:8000/v1/clientes
@@ -124,7 +124,8 @@ http://localhost:8000/v1/clientes
 <br>
 
 Listar todos os clientes<br>
-Método: GET
+Método: GET<br>
+Usar o token obtido pelo login<br>
 
 ```php
 GET http://localhost:8000/v1/clientes
@@ -140,7 +141,8 @@ http://localhost:8000/v1/clientes/1
 <br>
 
 Criar um produto<br>
-Método: POST
+Método: POST<br>
+Usar o token obtido pelo login<br>
 
 ```php
 http://localhost:8000/v1/produtos
@@ -155,7 +157,8 @@ http://localhost:8000/v1/produtos
 <br>
 
 Listar todos os produtos<br>
-Método: GET
+Método: GET<br>
+Usar o token obtido pelo login<br>
 
 ```php
 http://localhost:8000/v1/produtos
@@ -163,7 +166,8 @@ http://localhost:8000/v1/produtos
 <br>
 
 Listar produtos de um determinado cliente<br>
-Método: GET
+Método: GET<br>
+Usar o token obtido pelo login<br>
 
 ```php
 http://localhost:8000/v1/produtos/cliente/2
