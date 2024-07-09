@@ -105,7 +105,7 @@ JSON
 
 Criar um novo Cliente<br>
 Método: POST
-
+Usar o token obtido pelo login<br>
 ```php
 http://localhost:8000/v1/clientes
 {
