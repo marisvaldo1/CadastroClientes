@@ -88,7 +88,7 @@ JSON
 ```
 <br>
 
-Obter o token e logar (Colocar no insomnia Heathers Content-Type e application/json)
+Obter o token de acesso (Colocar no insomnia Heathers Content-Type e application/json)
 
 ```php
 GET http://localhost:8000/v1/login
