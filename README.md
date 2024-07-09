@@ -108,7 +108,10 @@ Método: POST<br>
 Usar o token obtido pelo login<br>
 
 ```php
+
 http://localhost:8000/v1/clientes
+
+JSON
 {
     "nome": "Teste Cliente",
     "cpf": "40273598104",
@@ -147,8 +150,10 @@ Método: POST<br>
 Usar o token obtido pelo login<br>
 
 ```php
+
 http://localhost:8000/v1/produtos
 
+JSON
 {
     "nome": "Nome do Produto",
     "preco": 99.99,
