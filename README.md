@@ -77,7 +77,7 @@ docker exec -it cadastroclientes_app_1 php yii create-user/index "teste" "teste1
 Criar um novo usuário pelo insomnia ou postman<br><br>
 
 ```php
-POST http://localhost:8000/v1/register
+GET http://localhost:8000/v1/register
 
 JSON
 {
@@ -91,7 +91,7 @@ JSON
 Obter o token e logar (Colocar no insomnia Heathers Content-Type e application/json)<br>
 
 ```php
-POST http://localhost:8000/v1/login
+GET http://localhost:8000/v1/login
 
 JSON
 {
@@ -159,7 +159,7 @@ Listar todos os produtos<br>
 Usar o token obtido pelo login<br>
 
 ```php
-POST http://localhost:8000/v1/produtos
+GET http://localhost:8000/v1/produtos
 ```
 <br>
 
@@ -167,7 +167,7 @@ Listar produtos de um determinado cliente<br>
 Usar o token obtido pelo login<br>
 
 ```php
-POST http://localhost:8000/v1/produtos/cliente/2
+GET http://localhost:8000/v1/produtos/cliente/2
 ```
 
 ## Banco de dados
