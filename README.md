@@ -74,7 +74,7 @@ docker exec -it cadastroclientes_app_1 php yii create-user/index "teste" "teste1
 ```
 <br>
 
-Criar um novo usuário pelo insomnia ou postman<br><br>
+Criar um novo usuário pelo insomnia ou postman
 
 ```php
 GET http://localhost:8000/v1/register
@@ -88,7 +88,7 @@ JSON
 ```
 <br>
 
-Obter o token e logar (Colocar no insomnia Heathers Content-Type e application/json)<br>
+Obter o token e logar (Colocar no insomnia Heathers Content-Type e application/json)
 
 ```php
 GET http://localhost:8000/v1/login
@@ -102,7 +102,7 @@ JSON
 <br>
 
 Criar um novo Cliente<br>
-Usar o token obtido pelo login<br>
+Usar o token obtido pelo login
 
 ```php
 POST http://localhost:8000/v1/clientes
@@ -124,7 +124,7 @@ JSON
 <br>
 
 Listar todos os clientes<br>
-Usar o token obtido pelo login<br>
+Usar o token obtido pelo login
 
 ```php
 GET http://localhost:8000/v1/clientes
@@ -132,7 +132,7 @@ GET http://localhost:8000/v1/clientes
 <br>
 
 Listar um cliente específico<br>
-Usar o token obtido pelo login<br>
+Usar o token obtido pelo login
 
 ```php
 GET http://localhost:8000/v1/clientes/1
@@ -140,7 +140,7 @@ GET http://localhost:8000/v1/clientes/1
 <br>
 
 Criar um produto<br>
-Usar o token obtido pelo login<br>
+Usar o token obtido pelo login
 
 ```php
 POST http://localhost:8000/v1/produtos
@@ -156,7 +156,7 @@ JSON
 <br>
 
 Listar todos os produtos<br>
-Usar o token obtido pelo login<br>
+Usar o token obtido pelo login
 
 ```php
 GET http://localhost:8000/v1/produtos
@@ -164,7 +164,7 @@ GET http://localhost:8000/v1/produtos
 <br>
 
 Listar produtos de um determinado cliente<br>
-Usar o token obtido pelo login<br>
+Usar o token obtido pelo login
 
 ```php
 GET http://localhost:8000/v1/produtos/cliente/2
